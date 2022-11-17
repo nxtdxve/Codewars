@@ -9,3 +9,6 @@ function isLeapYear(year) {
 function isLeapYear(year) {
     return new Date(year, 1, 29).getDate() === 29;
   }
+
+// Solution 3
+const isLeapYear = year => new Date(year, 1, 29).getDate() === 29;
