@@ -41,7 +41,6 @@ function solution(roman){
 
 // Solution 3
 function solution(roman) {
-    // Erstelle ein Objekt mit den römischen Ziffern und ihren dezimalen Werten
     const romanToDecimalMap = {
       I: 1,
       V: 5,
