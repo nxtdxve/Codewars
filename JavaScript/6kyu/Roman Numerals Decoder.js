@@ -38,3 +38,30 @@ function solution(roman){
     }
     return number
 }
+
+// Solution 3
+function solution(roman) {
+    // Erstelle ein Objekt mit den römischen Ziffern und ihren dezimalen Werten
+    const romanToDecimalMap = {
+      I: 1,
+      V: 5,
+      X: 10,
+      L: 50,
+      C: 100,
+      D: 500,
+      M: 1000,
+    };
+    let decimal = 0;
+  
+    for (let i = roman.length - 1; i >= 0; i--) {
+      const currentDecimal = romanToDecimalMap[roman[i]];
+      const nextDecimal = romanToDecimalMap[roman[i + 1]];
+      if (nextDecimal > currentDecimal) {
+        decimal -= currentDecimal;
+      } else {
+        decimal += currentDecimal;
+      }
+    }
+
+    return decimal;
+  }
